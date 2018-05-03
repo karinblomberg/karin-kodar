@@ -43,3 +43,17 @@ button{
     display: inline-block;
     font-size: 16px;
 }
+
+.tipsSection {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: white;
+}
+
+.main {
+  font-size: 120%;
+  color: red;
+}
