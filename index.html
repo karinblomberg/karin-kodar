@@ -11,17 +11,37 @@
       <div class="input">
         <input placeholder="tips till mig"></input>
       </div>
+      <button class="hej">Add</button>
     </div>
     <div class="tipsSection"></div>
+    <button class="submit">Go!</button>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
       $(function() {
+        $('.tipsSection').hide()
 
+      var add_option = function() {
         $('.input').append('<input></input>')
       }
+      $('.hej').click(add_option)
 
+      var options = []
+      var submit = function() {
+        $('.Registrera').hide()
+        $('.tipsSection').css('display','flex')
+        $('input').each(function() {
+          options.push($(this).val())
+        })
+        var winner = options[Math.floor(Math.random() * options.length)]
+        console.log(winner)
+        $('.tipsSection').text(winner)
+      }
+      $('.submit').click(submit)
+      {
+
+      }
     })
 
     </script>
